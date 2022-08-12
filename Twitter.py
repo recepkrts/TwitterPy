@@ -132,7 +132,7 @@ class Twitter:
         time.sleep(3)
 
 cikis = True
-twitter = Twitter("erkanyesilyayla","Erkan.1334qazüiç")
+twitter = Twitter(kAdi,psw)
 print("###################################################")
 print("###########Tweeter Bot \n by Recep KARATAŞ###########")
 print("###################################################")            
