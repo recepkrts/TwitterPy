@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 import keyboard
+import user
 
 class Twitter:
     def __init__(self,username,password):
@@ -132,7 +133,7 @@ class Twitter:
         time.sleep(3)
 
 cikis = True
-twitter = Twitter(kAdi,psw)
+twitter = Twitter(user.kAdi,user.sifre)
 print("###################################################")
 print("###########Tweeter Bot \n by Recep KARATAŞ###########")
 print("###################################################")            
