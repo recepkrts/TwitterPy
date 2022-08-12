@@ -1,2 +1,2 @@
-kAdi = ""
-sifre = ""
+kAdi = " "
+sifre = " "

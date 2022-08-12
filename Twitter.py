@@ -93,7 +93,7 @@ class Twitter:
         time.sleep(2)
         with open('tweet.txt','r',encoding="UTF-8") as oku:
             for satir in oku:
-                tweets.append(satir.lstrip("http://dha.com.tr/"))
+                tweets.append(satir.strip())
         uzunluk = len(tweets)
         i = 0
         while i<uzunluk:
@@ -123,7 +123,7 @@ class Twitter:
         time.sleep(1.5)
 
     def Share(self,deger):
-        tweetYaz = self.driver.find_element_by_xpath('/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div/div[3]/div/div[1]/div/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/label/div[1]/div/div/div/div/div[2]/div')
+        tweetYaz = self.driver.find_element_by_xpath('//div[@data-testid="tweetTextarea_0"]')
         tweetYaz.click()
         time.sleep(1.5)
         tweetYaz.send_keys(deger+"\n#konya\n@konyagundemm\nKonya")
@@ -135,7 +135,8 @@ class Twitter:
 cikis = True
 twitter = Twitter(user.kAdi,user.sifre)
 print("###################################################")
-print("###########Tweeter Bot \n by Recep KARATAŞ###########")
+print("##################Tweeter Bot######################")
+print("###############by Recep KARATAŞ####################")
 print("###################################################")            
 twitter.signIn()
 while cikis:
